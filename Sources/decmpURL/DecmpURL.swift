@@ -1,8 +1,8 @@
 import Foundation
 
-struct DecmpURL {
+public struct DecmpURL {
     let url: URL
-    init(url: URL) {
+    public init(url: URL) {
         self.url = url
     }
     
@@ -24,7 +24,7 @@ struct DecmpURL {
     }
 }
 
-enum DecmpError: Error {
+public enum DecmpError: Error {
     case noUrl
     case noHost(URL)
     case unknown
