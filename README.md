@@ -1,3 +1,6 @@
 # decmpURL
 
-A description of this package.
+![Swift](https://github.com/gucchisk/decmpURL/workflows/Swift/badge.svg)
+
+Decompress short url.
+
