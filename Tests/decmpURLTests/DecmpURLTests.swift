@@ -4,8 +4,12 @@ import XCTest
 final class DecmpURLTests: XCTestCase {
     func testSuccessDecompress() {
         let urlList: [(URL, URL)] = [
-            (URL(string: "https://amzn.to/2Z9XmxK")!, URL(string: "https://www.amazon.co.jp/gp/product/B07WLJJX8V/ref=as_li_tl?ie=UTF8&camp=247&creative=1211&creativeASIN=B07WLJJX8V&linkCode=as2&tag=gucchi0b-22&linkId=7782f713438104a29cf65d04c14710b4")!),
-            (URL(string: "https://amzn.to/2Z9Znu7")!, URL(string: "https://www.amazon.co.jp/gp/product/B07W7TP2FK/ref=as_li_tl?ie=UTF8&camp=247&creative=1211&creativeASIN=B07W7TP2FK&linkCode=as2&tag=gucchi0b-22&linkId=f5d730362aa59ecf3641e0ee894ac444")!)
+            (URL(string: "https://amzn.to/2XrxegU")!, URL(string: "https://www.amazon.co.jp/gp/product/B0826KJC28/ref=as_li_tl?ie=UTF8&camp=247&creative=1211&creativeASIN=B0826KJC28&linkCode=as2&tag=gucchi0b-22&linkId=6ede7ba4e280ade29283c1b14eb67151")!),
+            (URL(string: "https://is.gd/dLwfPX")!, URL(string: "https://www.yahoo.co.jp/")!),
+            (URL(string: "https://ux.nu/el0IU")!, URL(string: "https://www.yahoo.co.jp/")!),
+            (URL(string: "http://ow.ly/ogel50zQibM")!, URL(string: "https://www.yahoo.co.jp:443/")!),
+            (URL(string: "https://bit.ly/3elQGkK")!, URL(string: "https://www.yahoo.co.jp/")!),
+            (URL(string: "https://htn.to/3Q8FBXCpdp")!, URL(string: "https://anond.hatelabo.jp/20200521200214")!)
         ]
         var exps: [XCTestExpectation] = []
         urlList.forEach { (src, expect) in
