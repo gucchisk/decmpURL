@@ -9,8 +9,6 @@ public struct DecmpURL {
     public func decompress(completion: @escaping (Result<URL, Error>) -> Void) {
         var request = URLRequest(url: self.url)
         request.httpMethod = "HEAD"
-        // request.httpMethod = "GET"
-        //let session = URLSession.init(configuration: .default, delegate: SessionTaskDelegate(), delegateQueue: nil)
         let session = URLSession.shared
         let task = session.dataTask(with: request) { data, response, error in
             guard let res = response as? HTTPURLResponse else {
@@ -45,7 +43,6 @@ class SessionTaskDelegate: NSObject, URLSessionTaskDelegate {
         print("redirect")
     }
 }
-
 
 public enum DecmpError: Error {
     case noUrl
